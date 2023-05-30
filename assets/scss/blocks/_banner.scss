@@ -1,0 +1,39 @@
+@import "./form/form.scss";
+
+.banner {
+    width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 45px 20px;
+    background: url("../images/leaf.png") right 4px top -2px no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & h1 {
+        font-family: $lovelace;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 48px;
+        position: relative;
+        z-index: 3;
+
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 130px;
+            height: 39px;
+            background: url("../images/ellipse.png") 0 0 no-repeat;
+            top: 8px;
+            left: 50%;
+            margin-left: -20px;
+        }
+    }
+
+    @media(max-width:480.98px) {
+        width: 100%;
+    }
+}

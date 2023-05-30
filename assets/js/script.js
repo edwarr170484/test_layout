@@ -1,4 +1,4 @@
-function initTimer(){
+function initTimer() {
     let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
     let x = setInterval(() => {
@@ -11,8 +11,9 @@ function initTimer(){
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        document.getElementById("sale-hours").innerHTML = hours.toString().padStart(2, '0');
+        document.getElementById("sale-minutes").innerHTML = minutes.toString().padStart(2, '0');
+        document.getElementById("sale-seconds").innerHTML = seconds.toString().padStart(2, '0');
 
         if (distance < 0) {
             clearInterval(x);
